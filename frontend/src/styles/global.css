@@ -1,0 +1,82 @@
+:root {
+  --bg: #0a0a0f;
+  --surface: #13131a;
+  --surface2: #1c1c26;
+  --border: #2a2a38;
+  --accent: #7c6fff;
+  --accent2: #ff6f91;
+  --text: #e8e8f0;
+  --text-muted: #7a7a9a;
+  --success: #4fffb0;
+  --warning: #ffd166;
+  --error: #ff6b6b;
+  --orb-glow: rgba(124, 111, 255, 0.4);
+  --radius: 16px;
+  --font-head: 'Space Mono', monospace;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root { min-height: 100vh; display: flex; flex-direction: column; }
+
+button { cursor: pointer; font-family: var(--font-body); border: none; outline: none; }
+
+.screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  position: relative;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--orb-glow);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-muted);
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  border: 1px solid var(--border);
+  transition: all 0.2s;
+}
+
+.btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+h1, h2, h3 { font-family: var(--font-head); }
+
+.tag { display: inline-block; padding: 4px 12px; border-radius: 50px; font-size: 12px; font-weight: 600; letter-spacing: 0.05em; }
+.tag-beginner { background: rgba(79, 255, 176, 0.15); color: var(--success); }
+.tag-intermediate { background: rgba(255, 209, 102, 0.15); color: var(--warning); }
+.tag-advanced { background: rgba(124, 111, 255, 0.15); color: var(--accent); }
